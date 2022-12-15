@@ -45,8 +45,10 @@ dependencies {
     // Logging
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("de.siegmar:logback-gelf:$logback_gelf_version")
+    implementation("io.ktor:ktor-client-encoding:2.1.3")
 
     // Testing
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
-    testImplementation(kotlin("test-junit", kotlin_version))
+    testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
 }
