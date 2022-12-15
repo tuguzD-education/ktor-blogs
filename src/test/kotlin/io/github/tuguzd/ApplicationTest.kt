@@ -26,11 +26,11 @@ class ApplicationTest {
         application {
             module()
         }
-//        environment {
-//            config = MapApplicationConfig(
-//                "database.connectionUri" to "mongodb://mongo:password@localhost:27017/?authSource=admin"
-//            )
-//        }
+        environment {
+            config = MapApplicationConfig(
+                "database.connectionUri" to "mongodb://mongo:password@localhost:27017/?authSource=admin"
+            )
+        }
 
         val blog = BlogDto(name="Jet", desc="Brains")
         val client = createClient {
